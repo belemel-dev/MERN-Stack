@@ -26,7 +26,7 @@ const OrderSuccess = ({children}) => {
        const urlParams = new URLSearchParams(window.location.search);
        const sessionId = urlParams.get('session_id');
        if (sessionId) {
-        axios.get(`http://localhost:4000/api/v1/confirmPayment/${sessionId}`)
+        axios.get(`${process.env.REACT_APP_API_URL}/api/v1/confirmPayment/${sessionId}`)
           .then(response => {
             setStatusPayment(response.data);
             if(response.data && response.data.status === "succeeded"){
