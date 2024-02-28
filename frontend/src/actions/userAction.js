@@ -92,8 +92,10 @@ export const loadUser = () => async (dispatch) => {
     });
     
       dispatch({ type: LOAD_USER_SUCCESS, payload: data.user });
-    } catch (err) {
-        dispatch({ type: LOAD_USER_FAIL, payload: err.response.data.message });
+    } catch (error) {
+        dispatch({ 
+          type: LOAD_USER_FAIL, 
+          payload: error.response ? error.response.data.message : error.message });
     }  
 };
 export const clearErrors = () => async (dispatch) => {
