@@ -112,6 +112,7 @@ const ProductDetails = ({ match }) => {
                       key={i}
                       src={item.url}
                       alt={`${i} Slide`}
+                      style={{ width: '400px' }} 
                     />
                   ))}
               </Carousel>

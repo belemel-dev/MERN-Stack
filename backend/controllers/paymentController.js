@@ -93,7 +93,6 @@ res.status(200).end();
 
 exports.confirmPayment = async (req, res, next) => {
   const reqSession = req.params.sessionId; // Acessando o sessionId
-
   try {
   if(reqSession == sessionId){
       res.json(statusOrder);
