@@ -1,6 +1,6 @@
 import React from 'react'
 import { ReactNavbar } from "overlay-navbar"; 
-import logo from "../../../images/AKASHA.png";
+import logo from "../../../images/akashatech.png";
 import {FaUserAlt} from "react-icons/fa";
 import {BsSearch} from "react-icons/bs";
 import {BsFillBagFill} from "react-icons/bs";
